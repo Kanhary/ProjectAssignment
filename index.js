@@ -274,220 +274,108 @@ $(document).ready(function () {
   // Function to render menu items
   function renderMenu() {
     const menuData = [
+      // Whisky
       {
-        name: "Honey BBQ",
-        description:"baked honey BBQ popcorn chicken is the easiest appetizer ",
-        image: "../assets/images/appitizer1.jpg",
-        price: "$4",
-        categories: ["appetizer"],
+        name: "Smoky Oak Whisky",
+        description: "A rich whisky with a bold smoky flavor, aged in oak barrels.",
+        image: "../assets/images/menu1.png",
+        price: "$45",
+        categories: ["whisky"],
       },
       {
-        name: "Butter Chicken ",
-        description: "Crispy garlic butter chicken wings! Baked in the oven ",
-        image: "../assets/images/appitizer3.jpg",
-        price: "$6",
-        categories: ["appetizer"],
-      },
-      {
-        name: "Cheese Bread",
-        description: "Learn How to Cook Cheesy Garlic Bread Recipe For Free ",
-        image: "../assets/images/appitizer2.jpg",
-        price: "$5",
-        categories: ["appetizer"],
-      },
-      {
-        name: "Garlic Butter",
-        description: "Pillsbury Biscuit Garlic Butter Cheese Bombs Ingredients",
-        image: "../assets/images/appitizer4.jpg",
-        price: "$7",
-        categories: ["appetizer"],
-      },
-      {
-        name: "Shrimp Ceviche",
-        description: " refreshing dip that is loaded with shrimp, lime juice,",
-        image: "../assets/images/appitizer5.jpg",
-        price: "$7",
-        categories: ["appetizer"],
-      },
-      {
-        name: "Daiquiri",
-        description:
-          "his classic rum cocktail owes its origins to American mining engineer ",
-        image: "../assets/images/drinks1.jpg",
-        price: "$3",
-        categories: ["drink"],
-      },
-      {
-        name: "Dark Stormy",
-        description:
-          "Born in Bermuda, this rum drink was a match between the British Royal ",
-        image: "../assets/images/drinks2.jpg",
-        price: "$3",
-        categories: ["drink"],
-      },
-
-      {
-        name: "Mojito",
-        description:
-          "he original was invented in Havana, Cuba, but you can ",
-        image: "../assets/images/drinks3.jpg",
-        price: "$4",
-        categories: ["drink"],
-      },
-      {
-        name: "Planter Punch",
-        description:
-          "Likely originating in Jamaica, this rum drink recipe  ",
-        image: "../assets/images/drinks4.png",
-        price: "$3.5",
-        categories: ["drink"],
-      },
-      {
-        name: "Matcha Latte",
-        description:
-          "the start of summer to when the temps dip in the fall.  ",
-        image: "../assets/images/drinks5.jfif",
-        price: "$2.5",
-        categories: ["drink"],
-      },
-      
-      
-      {
-        name: "Tiramisu",
-        description:
-          "This decadent chocolate tiramisu features cocoa-coffee",
-        image: "../assets/images/dessert.jpg",
-        price: "$40",
-        categories: ["dessert"],
-      },
-      {
-        name: "Cheesecake",
-        description: "creamy delight of Cheesecake Crescent Rolls Casserole",
-        image: "../assets/images/dessert2.jpg",
-        price: "$39",
-        categories: ["dessert"],
-      },
-      {
-        name: "Orange Cake",
-        description: "Savor the flavors of Orange Blossom Cheesecake, a perfect",
-        image: "../assets/images/dessert3.jpg",
+        name: "Golden Reserve Whisky",
+        description: "A smooth and refined whisky with hints of vanilla and caramel.",
+        image: "../assets/images/menu2.png",
         price: "$60",
-        categories: ["dessert"],
+        categories: ["whisky"],
       },
       {
-        name: "Blueberry Cake",
-        description: "Lemon Blueberry Shortbread Mousse Cake: A Symphony of Flavors ",
-        image: "../assets/images/dessert4.jpg",
-        price: "$30",
-        categories: ["dessert"],
+        name: "Black Label Whisky",
+        description: "A premium blend of whisky with a deep, complex flavor profile.",
+        image: "../assets/images/menu3.png",
+        price: "$75",
+        categories: ["whisky"],
       },
       {
-        name: "Green Matcha",
-        description: "You can save them on your pin boards Green Matcha ",
-        image: "../assets/images/dessert5.jpg",
-        price: "$30",
-        categories: ["dessert"],
-      },
-      
-      {
-        name: "Salmon fillets ",
-        description:
-          " skin-side down, and cook for 4-5 minutes on each side",
-        image: "../assets/images/mainc1.jpg",
-        price: "$16",
-        categories: ["maincourse"],
+        name: "Peat Aged Whisky",
+        description: "A unique whisky with a distinctive peat smokiness.",
+        image: "../assets/images/menu4.png",
+        price: "$85",
+        categories: ["whisky"],
       },
       {
-        name: "Strip Steak",
-        description:
-          " quality steak right in your own backyard. ",
-        image: "../assets/images/mainc2.jpg",
-        price: "$22",
-        categories: ["maincourse"],
-      },
-      {
-        name: " B-Wellington",
-        description:
-          " is the Best and Easiest single-serve Beef Wellington Recipe Ever",
-        image: "../assets/images/mainc3.jpg",
-        price: "$299",
-        categories: ["maincourse"],
-      },
-      {
-        name: "Steak Plate",
-        description:
-          " A complete guide including where to place knives, forks, spoons,",
-        image: "../assets/images/mainc4.jpg",
-        price: "$88",
-        categories: ["maincourse"],
-      },
-      {
-        name: "Spagetti",
-        description:
-          "Spagetti with tomato sugo, peeled and diced fresh tomatoes and  •",
-        image: "../assets/images/mainc5.jpg",
-        price: "$19",
-        categories: ["maincourse"],
+        name: "Highland Gold Whisky",
+        description: "A smooth whisky with a sweet, fruity finish and a touch of spice.",
+        image: "../assets/images/whisky.png",
+        price: "$55",
+        categories: ["whisky"],
       },
       
-
+      // Bourbon
       {
-        name: "Pinot Wine",
-        description:
-        " Whiskey Glasses, Coasters & more Prestige Decanters  Decanters, ",
+        name: "Kentucky Bourbon",
+        description: "A traditional bourbon with strong vanilla and caramel notes.",
+        image: "../assets/images/menu2.png",
+        price: "$50",
+        categories: ["Bourbon"],
+      },
+    
+      // Fruit Liqueur
+      {
+        name: "Citrus Blossom Liqueur",
+        description: "A refreshing fruit liqueur with vibrant citrus flavors.",
+        image: "../assets/images/menu4.png",
+        price: "$35",
+        categories: ["fruit Liqueur"],
+      },
+      {
+        name: "Berry Fusion Liqueur",
+        description: "A sweet and tangy fruit liqueur made with a blend of berries.",
+        image: "../assets/images/menu5.png",
+        price: "$40",
+        categories: ["fruit Liqueur"],
+      },
+    
+      // Wine
+      {
+        name: "Grand Cru Bordeaux",
+        description: "An elegant Bordeaux wine with deep flavors of black currant and oak.",
         image: "../assets/images/wine1.jpg",
-        price: "$80",
+        price: "$120",
         categories: ["wine"],
       },
       {
-        name: "NADIA Wine",
-        description:
-        " Alive with notes of tart kiwi and zesty lime blossom ",
+        name: "Chardonnay Reserve",
+        description: "A full-bodied white wine with hints of butter and tropical fruits.",
         image: "../assets/images/wine2.jpg",
-        price: "$80",
+        price: "$85",
         categories: ["wine"],
       },
       {
-        name: "Le Mortelle",
-        description:
-        " Whiskey Glasses, Coasters & more Prestige Decanters  Decanters, ",
+        name: "Pinot Noir Elegance",
+        description: "A light, yet complex red wine with flavors of red berries and earthy undertones.",
         image: "../assets/images/wine3.jpg",
-        price: "$80",
+        price: "$95",
         categories: ["wine"],
       },
       {
-        name: "Rose Wine",
-        description:
-        "The Women Of Sonoma-Cutrer Are Making Kick-Ass Wine ",
+        name: "Riesling Sweetness",
+        description: "A sweet and aromatic white wine with floral and fruity notes.",
         image: "../assets/images/wine4.jpg",
-        price: "$80",
+        price: "$70",
         categories: ["wine"],
       },
       {
-        name: "Savalan",
-        description:
-        " Whiskey Glasses, Coasters & more Prestige Decanters  Decanters, ",
+        name: "Merlot Classic",
+        description: "A smooth and fruity red wine with rich flavors of plum and cherry.",
         image: "../assets/images/wine5.jpg",
         price: "$80",
         categories: ["wine"],
       },
-      {
-        name: "Anchor ",
-        description:
-          " Drunk, please do not drive",
-        image: "../assets/images/beer1.jpg",
-        price: "$20",
-        categories: ["beer"],
-      },
-      {
-        name: "Tiger",
-        description:
-          " Drunk, please do not drive",
-        image: "../assets/images/beer2.jpg",
-        price: "$20",
-        categories: ["beer"],
-      },
+    
+      
     ];
+    
 
     // Generate the menu initially with all items (this is the default)
     generateMenu(menuData);
