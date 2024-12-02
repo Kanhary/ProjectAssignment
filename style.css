@@ -879,24 +879,23 @@ nav .nav-bar .logo-text .separator {
 
 /* Button styling */
 .add-to-cart {
-  box-shadow: 0px 1px 2px 0px var(--box-color-shadow);
-  color: var(--body-color);
+  box-shadow: 6px 6px 0px 1px  rgb(203, 201, 201);
+  background-color: rgb(198, 170, 100);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
   border: none;
   font-weight: 700;
   padding: 5px 10px;
   font-size: 0.8em;
-  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  border: 1px solid var(--text-color);
-  background-color: var(--nav-color);
-  color: var(--text-color);
 }
 
 .add-to-cart:hover {
-  border: 1px solid var(--box-color-shadow);
-  background-color: var(--nav-color);
-  color: var(--text-color);
+  background: rgb(198, 170, 100);
+   box-shadow: none;
+    transform: translate(1px, 1px);
 }
 
 .add-to-cart:active {
