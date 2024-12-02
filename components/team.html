@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <title>Meet Our Team</title>
     <style>
         * {
@@ -40,10 +42,11 @@
             /* box-shadow: 6px 6px 0px -1px rgba(248, 247, 246, 0.786);             */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 0 0 1px rgba(171, 116, 21); 
+            margin-top: 3rem;
         }
         .team-member:hover {
             transform: translateY(-30px);
-            box-shadow: 0 0 0 1px rgba(171, 116, 21); 
+            box-shadow: 0 0 0 1px rgb(234, 175, 74); 
             background: rgb(232,231,255);
             background: linear-gradient(180deg, rgba(255, 255, 255, 0.127) 0%, rgb(208, 181, 83) 100%); 
         }
@@ -54,7 +57,6 @@
             border-radius: 50%;
             margin: 1.5rem auto;
             display: block;
-            border: 5px solid #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             
         }
@@ -81,76 +83,190 @@
                 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             }
         }
+        .social-icons {
+    margin-top: 10px;
+}
+
+.social-icon {
+    margin-right: 10px;
+    font-size: 24px;
+    color: rgb(171, 116, 21);
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #0077b5; /* Change this to any color you prefer */
+}
+.centered-content {
+        text-align: center;
+        max-width: 800px; /* Optional: to prevent text from stretching too wide */
+        margin: 0 auto; /* Center the content */
+    }
+
     </style>
 </head>
 <body>
     <section class="team-section">
         <div class="container">
-            <h1>Meet Our Team</h1>
+            <div style="text-align: center;">
+                <h1 style="color: rgb(171, 116, 21);">Meet Our Team</h1>
+                <p>
+                    From our experienced leaders to our creative problem solvers, we work collaboratively to create solutions that exceed expectations. Get to know the people who are behind our success, and discover how their expertise and passion make a difference in everything we do.
+                </p>
+            </div>
+            
             <div class="team-grid">
                 <div class="team-member">
-                    <img src="/assets/team-profile/sreyya.jpg" alt="John Doe">
+                    <img src="/assets/images/nary.jpg" alt="John Doe">
                     <div class="team-info">
-                        <h2>John Doe</h2>
-                        <div class="position">CEO & Founder</div>
-                        <p>John's visionary leadership has been instrumental in guiding our company to new heights of success and innovation.</p>
+                        <h2>Uk Kagnary</h2>
+                        <div class="position">Web-Developer</div>
+                        <p> Builds and maintains websites, ensuring functionality, performance, and user experience.</p>
+                        <div class="social-icons">
+                            <a href="https://facebook.com/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://t.me/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="team-member">
-                    <img src="/placeholder.svg?height=200&width=200" alt="Jane Smith">
+                    <img src="/assets/images/pheakdey.jpg" alt="Jane Smith">
                     <div class="team-info">
-                        <h2>Jane Smith</h2>
-                        <div class="position">CTO</div>
-                        <p>Jane's technical expertise ensures our products are at the cutting edge of technology and user experience.</p>
+                        <h2>Sem Pheakdey</h2>
+                        <div class="position">Network-Technical</div>
+                        <p>Installs, configures, and troubleshoots network systems for reliable connectivity fixing scanning printer.
+                        </p>
+                        <div class="social-icons">
+                            <a href="https://facebook.com/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://t.me/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="team-member">
-                    <img src="/placeholder.svg?height=200&width=200" alt="Mike Johnson">
+                    <img src="/assets/images/mengleang.jpg" alt="Mike Johnson">
                     <div class="team-info">
-                        <h2>Mike Johnson</h2>
-                        <div class="position">Marketing Director</div>
-                        <p>Mike's creative strategies have significantly expanded our market reach and brand recognition.</p>
+                        <h2>Nory Mengleang</h2>
+                        <div class="position">FullStack-Developer</div>
+                        <p>Handles both front-end and back-end development, creating complete applications.</p>
+                        <div class="social-icons">
+                            <a href="https://facebook.com/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://t.me/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="team-member">
-                    <img src="/placeholder.svg?height=200&width=200" alt="Emily Brown">
+                    <img src="/assets/images/lida.jpg" alt="Emily Brown">
                     <div class="team-info">
-                        <h2>Emily Brown</h2>
-                        <div class="position">Lead Designer</div>
-    
-                        <p>Emily's innovative designs have set new standards in user interface and product aesthetics.</p>
+                        <h2>Siev Lida</h2>
+                        <div class="position">Fronted-Developer</div>
+                        <p>Designs and develops the user interface for engaging, responsive web experiences.</p>
+                        <div class="social-icons">
+                            <a href="https://facebook.com/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://t.me/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="team-member">
-                    <img src="/placeholder.svg?height=200&width=200" alt="David Lee">
+                    <img src="/assets/images/sreyya.jpg" alt="David Lee">
                     <div class="team-info">
-                        <h2>David Lee</h2>
-                        <div class="position">Operations Manager</div>
-                        <p>David's operational excellence ensures smooth functioning across all departments of our organization.</p>
+                        <h2>Koun Sreyya</h2>
+                        <div class="position">Creative Strategist</div>
+                        <p>Develops innovative concepts and strategies to enhance brand impact and user engagement.</p>
+                        <div class="social-icons">
+                            <a href="https://facebook.com/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://t.me/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="team-member">
-                    <img src="/placeholder.svg?height=200&width=200" alt="Sarah Wilson">
+                    <img src="/assets/images/chen.jpg" alt="Sarah Wilson">
                     <div class="team-info">
-                        <h2>Sarah Wilson</h2>
-                        <div class="position">Customer Relations</div>
-                        <p>Sarah's dedication to customer satisfaction has been key to building our loyal client base.</p>
+                        <h2>Huon Chen</h2>
+                        <div class="position">Designer</div>
+                        <p>Crafts visually appealing and functional layouts for websites, apps, or graphics.</p>
+                        <div class="social-icons">
+                            <a href="https://facebook.com/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://t.me/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="team-member">
-                    <img src="/placeholder.svg?height=200&width=200" alt="Tom Garcia">
+                    <img src="/assets/images/meakara.jpg" alt="Tom Garcia">
                     <div class="team-info">
-                        <h2>Tom Garcia</h2>
-                        <div class="position">Lead Developer</div>
-                        <p>Tom's coding prowess and problem-solving skills drive the technical excellence of our products.</p>
+                        <h2>Khin Makara</h2>
+                        <div class="position">Idea Innovator</div>
+                        <p>Generates creative and transformative ideas for projects and problem-solving.</p>
+                        <div class="social-icons">
+                            <a href="https://facebook.com/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://t.me/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="team-member">
-                    <img src="/placeholder.svg?height=200&width=200" alt="Lisa Chen">
+                    <img src="/assets/images/raining.jpg" alt="Lisa Chen">
                     <div class="team-info">
-                        <h2>Lisa Chen</h2>
-                        <div class="position">Financial Analyst</div>
-                        <p>Lisa's financial acumen ensures our company's fiscal health and guides our strategic investments.</p>
+                        <h2>Nhoem Raining</h2>
+                        <div class="position">Backend-Developer</div>
+                        <p>Focuses on server-side logic, databases, and APIs to power applications.</p>
+                        <div class="social-icons">
+                            <a href="https://facebook.com/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://t.me/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/johndoe" target="_blank" class="social-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
