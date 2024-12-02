@@ -355,7 +355,6 @@ nav .nav-bar .logo-text .separator {
   transition: inherit;
 }
 
-
 .frutiger-text {
   position: relative;
   z-index: 1;
@@ -406,8 +405,8 @@ nav .nav-bar .logo-text .separator {
 #cart-background {
   width: 100%;
   height: 100%;
-  background: #ffffff; /* Adjust color as needed */
-  filter: blur(10px); /* Adjust blur strength */
+  background: #ffffff; 
+  filter: blur(10px); 
 }
 
 #cart-popup-overlay {
@@ -416,7 +415,7 @@ nav .nav-bar .logo-text .separator {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0.5); 
   backdrop-filter: blur(5px); /* Blur effect */
   z-index: 999; /* Below cart popup */
   display: none; /* Initially hidden */
