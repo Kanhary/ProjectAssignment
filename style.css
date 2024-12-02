@@ -2026,6 +2026,9 @@ footer {
   nav .nav-bar .sidebarOpen {
     display: block;
   }
+  #slas-menu{
+    display: none;
+  }
   .menu {
     position: fixed;
     height: 100%;
