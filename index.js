@@ -356,14 +356,15 @@ $(document).on("click", "#home-btn-reservation", function (e) {
     $("#menuGrid").empty(); // Clear the menu grid before adding new items
     items.forEach((item) => {
       const menuItemHtml = `
-        <div class="menu-item"  data-aos="zoom-in">
-          <img src="${item.image}" alt="${item.name}" />
-          <div class="menu-flex">
-            <strong>${item.name}</strong> - <span style="color: #ff0000;">${item.price}</span>
-            <p>${item.description}</p>
-            <button class="add-to-cart" data-item="${item.name}" data-image="${item.image}" data-price="${item.price}">Add to Cart</button>
-          </div>
-        </div>
+      <div class="menu-item" data-aos="zoom-in">
+      <img src="${item.image}" alt="${item.name}" />
+      <div class="menu-flex">
+        <strong>${item.name}</strong> - <span style="color: #ff0000;">${item.price}</span>
+        <p>${item.description}</p>
+        <button class="add-to-cart" data-item="${item.name}" data-image="${item.image}" data-price="${item.price}">Add to Cart</button>
+      </div>
+    </div>
+    
       `;
       $("#menuGrid").append(menuItemHtml); // Append the item HTML to the menu grid
     });

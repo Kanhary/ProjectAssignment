@@ -813,9 +813,9 @@ nav .nav-bar .logo-text .separator {
 
 #menuGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 5px;
-  padding: 20px;
+  padding: 30px;
   justify-items: center;
 }
 
@@ -842,7 +842,7 @@ nav .nav-bar .logo-text .separator {
 .menu-item img {
   padding: 10px;
   width: 100%; /* Make image fill the container width */
-  height: 220px; /* Set a fixed height for equal height and width */
+  height: 280px; /* Set a fixed height for equal height and width */
   border-radius: 20px;
   object-fit: cover; /* Ensures the image covers the space without distortion */
 }
@@ -893,9 +893,9 @@ nav .nav-bar .logo-text .separator {
 }
 
 .add-to-cart:hover {
-  background: rgb(198, 170, 100);
-   box-shadow: none;
-    transform: translate(1px, 1px);
+  border: 1px solid var(--box-color-shadow);
+  background-color: var(--nav-color);
+  color: var(--text-color);
 }
 
 .add-to-cart:active {
