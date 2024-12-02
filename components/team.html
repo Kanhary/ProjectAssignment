@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Our Team</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Poppins;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f0f2f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 4rem;
+        }
+        
+        .team-member {
+            background-color: #fff;
+            width: 350px;
+            border-radius: 10px;
+            /* box-shadow: 6px 6px 0px -1px rgba(248, 247, 246, 0.786);             */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 0 0 1px rgba(171, 116, 21); 
+        }
+        .team-member:hover {
+            transform: translateY(-30px);
+            box-shadow: 0 0 0 1px rgba(171, 116, 21); 
+            background: rgb(232,231,255);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.127) 0%, rgb(208, 181, 83) 100%); 
+        }
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 1.5rem auto;
+            display: block;
+            border: 5px solid #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            
+        }
+        .team-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .team-info h2 {
+            margin: 0 0 0.5rem;
+            color: #2c3e50;
+            font-size: 1.5rem;
+        }
+        .team-info .position {
+            color: rgb(171, 116, 21);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .team-info p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="team-section">
+        <div class="container">
+            <h1>Meet Our Team</h1>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="/assets/images/sreyya.jpg" alt="John Doe">
+                    <div class="team-info">
+                        <h2>John Doe</h2>
+                        <div class="position">CEO & Founder</div>
+                        <p>John's visionary leadership has been instrumental in guiding our company to new heights of success and innovation.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/placeholder.svg?height=200&width=200" alt="Jane Smith">
+                    <div class="team-info">
+                        <h2>Jane Smith</h2>
+                        <div class="position">CTO</div>
+                        <p>Jane's technical expertise ensures our products are at the cutting edge of technology and user experience.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/placeholder.svg?height=200&width=200" alt="Mike Johnson">
+                    <div class="team-info">
+                        <h2>Mike Johnson</h2>
+                        <div class="position">Marketing Director</div>
+                        <p>Mike's creative strategies have significantly expanded our market reach and brand recognition.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/placeholder.svg?height=200&width=200" alt="Emily Brown">
+                    <div class="team-info">
+                        <h2>Emily Brown</h2>
+                        <div class="position">Lead Designer</div>
+    
+                        <p>Emily's innovative designs have set new standards in user interface and product aesthetics.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/placeholder.svg?height=200&width=200" alt="David Lee">
+                    <div class="team-info">
+                        <h2>David Lee</h2>
+                        <div class="position">Operations Manager</div>
+                        <p>David's operational excellence ensures smooth functioning across all departments of our organization.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/placeholder.svg?height=200&width=200" alt="Sarah Wilson">
+                    <div class="team-info">
+                        <h2>Sarah Wilson</h2>
+                        <div class="position">Customer Relations</div>
+                        <p>Sarah's dedication to customer satisfaction has been key to building our loyal client base.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/placeholder.svg?height=200&width=200" alt="Tom Garcia">
+                    <div class="team-info">
+                        <h2>Tom Garcia</h2>
+                        <div class="position">Lead Developer</div>
+                        <p>Tom's coding prowess and problem-solving skills drive the technical excellence of our products.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/placeholder.svg?height=200&width=200" alt="Lisa Chen">
+                    <div class="team-info">
+                        <h2>Lisa Chen</h2>
+                        <div class="position">Financial Analyst</div>
+                        <p>Lisa's financial acumen ensures our company's fiscal health and guides our strategic investments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
