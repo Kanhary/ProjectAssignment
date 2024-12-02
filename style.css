@@ -1659,10 +1659,11 @@ animation-play-state: paused;
 }
 
 .button{
-  padding: 10px 20px;
+  padding: 1px 20px;
   background-color: var(--btn-gold);
   border-color: var(--btn-gold);
   color: #000;
+  border-radius: 5px;
 }
 
 
