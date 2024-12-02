@@ -208,7 +208,13 @@ $("#clear-cart-btn").on("click", function () {
     alert("Cart cleared!");
   }
 });
-
+$(document).on("click", "#home-btn-reservation", function (e) {
+  e.preventDefault();
+  $("#content").load("/components/menu.html", function () {
+    window.scrollTo(0, 0);
+    // closeMenu(); // Close the menu
+  });
+});
 
   // Function to render menu items
   function renderMenu() {
