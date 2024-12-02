@@ -5,20 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-
-  
 </head>
 
 <body>
   <section>
-    <div class="carousel">
+    <div class="carousel" data-aos="fade-up" data-aos-duration="1500">
 
       <div class="list">
 
           <div class="item" style="background-image:
           linear-gradient(to bottom, rgba(115, 115, 118, 0.219), rgba(0, 0, 0, 0.773)),
-          url('/assets/images/s1.jpg');">
+          url('/assets/images/s1.jpg');" >
               <div class="content">
                   <div class="title">WELCOME TO</div>
                   <div class="name">Wine Haven</div>
@@ -32,9 +31,9 @@
 
           <div class="item" style="background-image:
           linear-gradient(to bottom, rgba(115, 115, 118, 0.219), rgba(0, 0, 0, 0.773)),
-          url('/assets/images/s2.jpg');">
+          url('/assets/images/s2.jpg');" >
               
-              <div class="content">
+              <div class="content" >
                   <div class="title">WELCOME to</div>
                   <div class="name">OUR STORE</div>
                   <div class="des">JODO Winery & Distillery, where we offer a wide array of exquisite wines, fine whiskies, and handcrafted spirits, each created with passion and a dedication to quality. Join us for an unforgettable tasting experience.</div>
@@ -103,7 +102,7 @@
 
 
 
-  <section>
+  <section data-aos="fade-right" data-aos-duration="2000">
     <div class="home-offer">
 
       <div class="home-dish-title" >The flavor</div>
@@ -204,13 +203,11 @@
       </div>
       <button class="button" id="home-btn-menu">View More</button>
     </div>
-
-
   </section>
 
   
 
-  <section class="features">
+  <section class="features" data-aos="fade-left" data-aos-duration="2000">
     <div class="features-title">
       <div class="home-dish-title">Why Choose Us</div>
       <div class="loader"></div>
@@ -315,6 +312,9 @@ function showSlider(type) {
 
 // Start the initial animation 
 resetTimeAnimation()
+  </script>
+   <script>
+    AOS.init();
   </script>
 </body>
 </html>

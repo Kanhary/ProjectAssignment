@@ -86,6 +86,7 @@ body.dark {
 body {
   height: 100vh;
   background-color: var(--body-color);
+
 }
 
 section {
@@ -908,7 +909,7 @@ nav .nav-bar .logo-text .separator {
   /* margin-top: -50px; */
   overflow: hidden;
   position: relative;
-
+  
   margin-bottom: 3rem;
   margin-top: 1rem;
 }
@@ -1659,13 +1660,21 @@ animation-play-state: paused;
 }
 
 .button{
-  padding: 1px 20px;
-  background-color: var(--btn-gold);
-  border-color: var(--btn-gold);
-  color: #000;
-  border-radius: 5px;
+  color: #fff;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border: none;
+  background: rgb(200, 170, 110);
+  box-shadow: 6px 6px 0px 1px  rgb(203, 201, 201);
+  cursor: pointer;
+  transition: 0.5s;
 }
 
+.button:hover{
+  background: rgb(200, 170, 110);
+   box-shadow: none;
+   transform: translate(1px, 1px);
+}
 
 /* HOME */
 
@@ -1683,6 +1692,7 @@ animation-play-state: paused;
   position: relative;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   overflow: hidden;
+  margin-top: 2rem;
 }
 
 .about-section::before {
@@ -1701,8 +1711,8 @@ animation-play-state: paused;
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1px;
-  font-family: 'Roboto', sans-serif;
-  color: #ffffff;
+  font-family: 'Poppins';
+  color: rgb(198, 170, 100);
   text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
   margin-bottom: 12px;
 }
@@ -1713,8 +1723,7 @@ animation-play-state: paused;
   max-width: 500px;
   margin: 8px auto;
   color: #eaeaea;
-  font-family: 'Lora', serif;
-  font-style: italic;
+  font-family: 'Poppins';
   text-align: center;
   margin-bottom: 18px;
 }
@@ -1726,17 +1735,21 @@ animation-play-state: paused;
   flex-wrap: wrap;
   gap: 18px;
   padding: 20px 12px;
+
 }
 
 .about-image {
   flex: 1 1 45%;
   max-width: 340px;
   text-align: center;
-  border: 2px solid #e1e1e1;
+  /* border: 2px solid #e1e1e1; */
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12); */
   overflow: hidden;
   transition: all 0.3s ease-in-out;
+  border: 3px solid rgb(198, 170, 100);
+
+  
 }
 
 .about-image:hover {
@@ -1775,9 +1788,10 @@ animation-play-state: paused;
 
 .about-text h2 {
   font-size: 1.8rem;
+  font: bolder;
   color: #333;
   margin-bottom: 12px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins';
   text-transform: uppercase;
 }
 
@@ -1786,29 +1800,33 @@ animation-play-state: paused;
   line-height: 1.6;
   color: #555;
   margin-bottom: 18px;
-  font-family: 'Lora', serif;
+  font-family: 'Poppins';
+
 }
 
 .about-text a {
-  display: inline-block;
-  padding: 10px 18px;
-  background-color: rgb(198, 170, 100);
-  color: white;
+  color: #fff;
+  letter-spacing: 1px;
+  padding: 8px 20px;
+  border: none;
+  background: rgb(200, 170, 110);
+  box-shadow: 6px 6px 0px 1px  rgb(203, 201, 201);
+  cursor: pointer;
+  transition: 0.5s;
   text-decoration: none;
-  border-radius: 25px;
-  font-weight: 600;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 12px;
+  border-radius: 5px;
 }
 
 .about-text a:hover {
   background-color: rgb(200, 170, 110);
-  transform: translateY(-3px);
+  box-shadow: none;
+   transform: translate(1px, 1px);
 }
 
 .about-text ul {
   list-style-type: none;
   margin-top: 18px;
+  
 }
 
 .about-text ul li {
@@ -1817,13 +1835,14 @@ animation-play-state: paused;
   margin-bottom: 8px;
   padding-left: 18px;
   position: relative;
+
 }
 
 .about-text ul li::before {
   content: '•';
   position: absolute;
   left: 0;
-  color: #5e72e4;
+  color: rgb(198, 170, 100);
   font-size: 1.3rem;
   top: 4px;
 }
@@ -1865,7 +1884,7 @@ animation-play-state: paused;
 
 .intro {
   font-size: 1.2rem;
-  color: #666;
+  color: white;
   text-align: center;
   margin-bottom: 40px;
 }
@@ -1887,9 +1906,7 @@ animation-play-state: paused;
   transition: transform 0.3s ease;
 }
 
-.contact-form:hover {
-  transform: scale(1.02);
-}
+
 
 .contact-form h2 {
   font-size: 1.8rem;
@@ -1929,11 +1946,14 @@ animation-play-state: paused;
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
+  box-shadow: 6px 6px 0px 1px  rgb(203, 201, 201);
+  /* transition: background 0.3s ease; */
 }
 
 .contact-form .submit-btn:hover {
-  background-color: #4a2d2a;
+  background: rgb(198, 170, 100);
+   box-shadow: none;
+    transform: translate(1px, 1px);
 }
 
 .map-container {
@@ -1968,7 +1988,7 @@ animation-play-state: paused;
 /* FOOTER */
 
 footer {
-  background-color: #222;
+  background-color: rgb(137, 118, 71);
   color: #fff;
   padding: 40px 20px;
 }
@@ -1995,7 +2015,7 @@ footer {
 .footer-item ul li,
 .footer-item ul li a {
   font-size: 14px;
-  color: #aaa;
+  color: white;
   line-height: 1.6;
 }
 
@@ -2011,7 +2031,7 @@ footer {
 
 .footer-item ul li a {
   text-decoration: none;
-  color: #aaa;
+  color: white;
   transition: color 0.3s;
 }
 

@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
@@ -24,28 +26,28 @@
       <div class="wloader"></div>
     </div>
 
-    <nav>
+    <nav >
       <div class="nav-bar">
         <div class="nav-flex">
           <i class="fa-solid fa-bars sidebarOpen"></i>
-          <span class="logo navLogo">
+          <span class="logo navLogo" data-aos="fade-right" data-aos-duration="1500">
             <div class="icon-container">
               <i class="fa-solid fa-wine-bottle"></i>
             </div>
             <div class="logo-text">
-              <a href="#">JODO</a>
+              <a href="#">KENOIR</a>
               <span class="separator">|</span>
               <a href="#">STORE</a>
             </div>
           </span>
           
           
-          >
-          <div class="menu">
+          
+          <div class="menu" data-aos="fade-right" data-aos-duration="1500">
             <div class="logo-toggle">
               <span class="logo"
                 ><i class="fa-solid fa-wine-bottle"></i>
-                <div class="logo-text"><a href="#">JODO</a><a href="#">STORE</a></div></span
+                <div class="logo-text"><a href="#">KENOIR</a><a href="#">STORE</a></div></span
               >
               <i class="fa-solid fa-xmark sidebarClose"></i>
             </div>
@@ -63,9 +65,8 @@
           </div>
         </div>
 
-        <div class="nav-flex">
-          
-
+        <div class="nav-flex" data-aos="fade-right" data-aos-duration="1500">
+        
           <div class="darkLight-searchBox">
             <button class="frutiger-button">
               <div class="inner-nav">
@@ -100,12 +101,12 @@
       </div>
     </nav>
 
-    <div id="content">
+    <div id="content" >
       <!-- Page content will be dynamically loaded here -->
     </div>
     <div id="cart-popup-overlay"></div>
 
-<div id="cart-popup">
+<div id="cart-popup" >
   <button id="close-cart-popup" class="close-btn">×</button>
   <h3>Shopping Cart</h3>
   <ul id="cart-items">
@@ -125,7 +126,9 @@
     <footer id="footer-container">
       <!-- Footer content can be dynamically loaded here if needed -->
     </footer>
-
+    <script>
+      AOS.init();
+    </script>
     <script>
       const body = document.querySelector("body"),
         nav = document.querySelector("nav"),
