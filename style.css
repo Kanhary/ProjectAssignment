@@ -305,7 +305,7 @@ nav .nav-bar .logo-text .separator {
 }
 
 .frutiger-button {
-  background: radial-gradient(circle at top left, #c6aa64, #4a2d2a)
+  /* background: radial-gradient(circle at top left, #c6aa64, #4a2d2a) */
   border: none;
   /* padding: 2px; */
   border-radius: 6px;
@@ -322,7 +322,7 @@ nav .nav-bar .logo-text .separator {
   padding: 10px 15px;
   border-radius: 5px;
  
-  background: var(--nav-color);
+  /* background: var(--nav-color); */
 
   overflow: hidden;
   transition: inherit;
