@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>About Us</title>
     <!-- <link rel="stylesheet" href="/style.css"> -->
   </head>
@@ -10,14 +11,14 @@
   <body>
     <main>
       <section>
-        <div class="about-section">
+        <div class="about-section" data-aos="zoom-in" data-aos-duration="1500">
           <h1>About Us</h1>
-          <p class="intro">
+          <p class="intro" data-aos="fade-up" data-aos-duration="1500">
             Welcome to JODO Winery & Distillery, where we offer a wide array of exquisite wines, fine whiskies, and handcrafted spirits, each created with passion and a dedication to quality. Join us for an unforgettable tasting experience.
           </p>
         </div>
 
-        <div class="about-content" id="about1">
+        <div class="about-content" id="about1" data-aos="fade-right" data-aos-duration="1500">
           <div class="about-image">
             <img src="/assets/images/wine-tasting.jpg" alt="Wine Tasting" />
           </div>
@@ -34,7 +35,7 @@
           </div>
         </div>
 
-        <div class="about-content" id="about2">
+        <div class="about-content" id="about2" data-aos="fade-left" data-aos-duration="1500">
           <div class="about-text">
             <i class="fa-solid fa-quote-right"></i>
             <h2>Our Values</h2>
@@ -56,7 +57,7 @@
           </div>
         </div>
 
-        <div class="about-content" id="about3">
+        <div class="about-content" id="about3" data-aos="fade-right" data-aos-duration="1500">
           <div class="about-image">
             <img src="/assets/images/whisky1.png" alt="Whisky Bar" />
           </div>
@@ -71,5 +72,8 @@
         </div>
       </section>
     </main>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
