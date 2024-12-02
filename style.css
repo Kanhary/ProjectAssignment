@@ -382,15 +382,101 @@ nav .nav-bar .logo i {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: var(--body-color);
-  border: 1px solid var(--text-color);
-  border-radius: 5px;
-  padding: 20px;
-  z-index: 1000; /* Above overlay */
-  width: 500px;
-  box-shadow: 0 4px 8px var(--box-color-shadow);
-  display: none; /* Initially hidden */
+  background: linear-gradient(135deg, #fff 0%, #f8f8f8 100%);
+  border-radius: 12px;
+  padding: 30px;
+  z-index: 1000;
+  width: 680px;
+  max-width: 90%;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  display: none;
+  transition: all 0.4s ease-in-out;
 }
+
+#cart-popup.show {
+  display: block;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+#cart-popup h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+#cart-items li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+#cart-total {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#total-cost {
+  color: #c6aa64;
+  font-weight: 700;
+}
+
+.cart-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+
+
+
+
+#checkout-loader,
+#checkout-success {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.3s ease;
+}
+
+
 
 
 #cart-popup-overlay {
@@ -2028,7 +2114,7 @@ footer {
     padding: 10px;
     width: 310px;
     position: fixed;
-    top: 190px;
+    top: 290px;
     right: -420px;
 }
 .cart-actions button {

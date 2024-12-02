@@ -84,13 +84,7 @@ $(document).ready(function () {
       // closeMenu(); // Close the menu
     });
   });
-  $(document).on("click", "#home-btn-reservation", function (e) {
-    e.preventDefault();
-    $("#content").load("/components/reservation.html", function () {
-      window.scrollTo(0, 0);
-      // closeMenu(); // Close the menu
-    });
-  });
+  
 
   $(document).on("click", "#home-btn-contact", function (e) {
     e.preventDefault();
@@ -176,7 +170,7 @@ function renderCart() {
         <li class="cart-item">
           <img src="${item.image}" alt="${item.name}" class="image-cart" />
           <div>${item.name} - ${item.price}</div>
-          <button class="remove-item" data-index="${index}">Remove</button>
+          <button class="remove-item" data-index="${index}"><i class="fa-solid fa-xmark"></i></button>
         </li>
       `);
     });
