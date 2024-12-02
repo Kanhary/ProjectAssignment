@@ -55,21 +55,9 @@ $(document).ready(function () {
     });
   });
 
-  $("#bloglink").click(function (e) {
-    e.preventDefault();
-    $("#content").load("/components/blog.html", function () {
-      window.scrollTo(0, 0); // Scroll to the top of the page after loading content
-      // closeMenu(); // Close the menu
-    });
-  });
 
-  $("#reservationlink").click(function (e) {
-    e.preventDefault();
-    $("#content").load("/components/reservation.html", function () {
-      window.scrollTo(0, 0); // Scroll to the top of the page after loading content
-      // closeMenu(); // Close the menu
-    });
-  });
+
+  
 
   $("#contactlink").click(function (e) {
     e.preventDefault();
@@ -133,143 +121,100 @@ $(document).ready(function () {
   }
 
   // Cart functionality
-  const cart = []; // Array to store cart items
+  const cart = [];
 
-  $("#viewCart").on("click", function () {
-    $("#cart-popup").toggle(); // Toggles visibility
-    $("#cart-popup-overlay").toggle(); // Toggles overlay
-  });
+// Toggle cart popup and overlay
+$("#viewCart").on("click", function () {
+  $("#cart-popup, #cart-popup-overlay").toggle();
+});
 
-  // Handle adding items to the cart
-  $(document).on("click", ".add-to-cart", function () {
-    const itemName = $(this).data("item");
-    const itemImage = $(this).data("image");
-    const itemPrice = $(this).data("price");
+// Close cart popup and overlay
+$("#close-cart-popup, #cart-popup-overlay").on("click", function () {
+  $("#cart-popup, #cart-popup-overlay").hide();
+});
 
-    cart.push({ name: itemName, image: itemImage, price: itemPrice }); // Add item to cart
-    // alert(`${itemName} added to cart!`);
-    renderCart(); // Re-render the cart
-    updateCartCount(); // Update the cart count
-  });
+// Add to cart
+$(document).on("click", ".add-to-cart", function () {
+  const itemName = $(this).data("item");
+  const itemImage = $(this).data("image");
+  const itemPrice = $(this).data("price");
 
-  // Remove item from cart
-  $(document).on("click", ".remove-item", function () {
-    const index = $(this).data("index");
-    cart.splice(index, 1); // Remove item from cart
-    renderCart(); // Re-render the cart
-    updateCartCount(); // Update the cart count
-  });
+  cart.push({ name: itemName, image: itemImage, price: itemPrice });
+  renderCart();
+  updateCartCount();
+});
 
-  // Function to update the cart count display
-  function updateCartCount() {
-    const cartCount = cart.length; // Get the number of items in the cart
-    $("#viewCart span").text(cartCount); // Update the count in the cart icon
+// Remove item from cart
+$(document).on("click", ".remove-item", function () {
+  const index = $(this).data("index");
+  cart.splice(index, 1);
+  renderCart();
+  updateCartCount();
+});
+
+// Update cart count
+function updateCartCount() {
+  $("#viewCart span").text(cart.length);
+}
+
+// Calculate and render total
+function calculateTotal() {
+  const total = cart.reduce((sum, item) => sum + parseFloat(item.price.replace("$", "")), 0);
+  $("#total-cost").text(`$${total.toFixed(2)}`);
+}
+
+// Render cart
+function renderCart() {
+  const cartItemsList = $("#cart-items");
+  cartItemsList.empty();
+
+  if (cart.length === 0) {
+    cartItemsList.append("<li>Your cart is empty.</li>");
+  } else {
+    cart.forEach((item, index) => {
+      cartItemsList.append(`
+        <li class="cart-item">
+          <img src="${item.image}" alt="${item.name}" class="image-cart" />
+          <div>${item.name} - ${item.price}</div>
+          <button class="remove-item" data-index="${index}">Remove</button>
+        </li>
+      `);
+    });
   }
-  function calculateTotal() {
-    const total = cart.reduce((sum, item) => {
-      const price = parseFloat(item.price.replace("$", "")); // Convert price string to number
-      return sum + price;
-    }, 0);
-    $("#total-cost").text(`$${total.toFixed(2)}`); // Update the total cost in the cart
+  calculateTotal();
+}
+
+// Checkout
+$("#checkout-btn").on("click", function () {
+  if (cart.length === 0) {
+    alert("Your cart is empty. Add items to proceed.");
+    return;
   }
-  // Function to render cart items
-  function renderCart() {
-    const cartItemsList = $("#cart-items");
-    cartItemsList.empty(); // Clear existing cart items
 
-    if (cart.length === 0) {
-      cartItemsList.append("<li>Your cart is empty.</li>");
-    } else {
-      cart.forEach((item, index) => {
-        const cartItemHtml = `
-          <li class="cart-item">
-            <img src="${item.image}" alt="${item.name}" class="image-cart" />
-            <div>${item.name} - ${item.price}</div>
-            <button class="remove-item" data-index="${index}">
-              Remove
-            </button>
-          </li>
-        `;
-        cartItemsList.append(cartItemHtml);
-      });
-    }
-    calculateTotal();
+  $("#checkout-loader").removeClass("hidden");
+
+  setTimeout(() => {
+    $("#checkout-loader").addClass("hidden");
+    $("#checkout-success").removeClass("hidden");
+
+    cart.length = 0;
+    renderCart();
+    updateCartCount();
+
+    setTimeout(() => $("#checkout-success").addClass("hidden"), 3000);
+  }, 2000);
+});
+
+// Clear cart
+$("#clear-cart-btn").on("click", function () {
+  if (cart.length && confirm("Are you sure you want to clear the cart?")) {
+    cart.length = 0;
+    renderCart();
+    updateCartCount();
+    alert("Cart cleared!");
   }
-  // Handle the close button
-  $("#close-cart-popup").on("click", function () {
-    $("#cart-popup").hide(); // Hide the cart popup
-    $("#cart-popup-overlay").hide(); // Hide the overlay
-  });
+});
 
-  // Handle overlay click (optional, to close the popup by clicking outside)
-  $("#cart-popup-overlay").on("click", function () {
-    $("#cart-popup").hide(); // Hide the cart popup
-    $("#cart-popup-overlay").hide(); // Hide the overlay
-  });
-
-  // Ensure the popup can still be toggled open using the "View Cart" button
-  $("#viewCart").on("click", function () {
-    $("#cart-popup").show(); // Show the cart popup
-    $("#cart-popup-overlay").show(); // Show the overlay
-  });
-
-  $("#checkout-btn").on("click", function () {
-    if (cart.length === 0) {
-      alert("Your cart is empty. Add items to proceed.");
-      return;
-    }
-
-    const loader = $("#checkout-loader");
-    const successMessage = $("#checkout-success");
-
-    // Show loader
-    loader.removeClass("hidden");
-
-    // Simulate checkout process with a timeout
-    setTimeout(() => {
-      // Hide loader
-      loader.addClass("hidden");
-
-      // Show success message
-      successMessage.removeClass("hidden");
-
-      // Clear the cart after a successful checkout
-      cart.length = 0;
-      renderCart(); // Re-render the cart to update UI
-      updateCartCount(); // Update cart count
-
-      // Hide the success message after a few seconds
-      setTimeout(() => {
-        successMessage.addClass("hidden");
-      }, 3000);
-    }, 2000); // Simulate a 2-second delay for the loader
-  });
-
-  $("#checkout-btn").on("click", function () {
-    if (cart.length === 0) {
-      alert("Your cart is empty. Add items to proceed.");
-    } else {
-      const total = cart.reduce((sum, item) => {
-        const price = parseFloat(item.price.replace("$", ""));
-        return sum + price;
-      }, 0);
-      alert(`Your total is $${total.toFixed(2)}. Proceeding to checkout.`);
-      // Redirect to checkout page or handle checkout logic
-      // window.location.href = "/checkout.html";
-    }
-  });
-  $("#clear-cart-btn").on("click", function () {
-    if (cart.length === 0) {
-      alert("Your cart is already empty.");
-    } else {
-      if (confirm("Are you sure you want to clear the cart?")) {
-        cart.length = 0; // Clear the cart array
-        renderCart(); // Re-render the cart to update UI
-        updateCartCount(); // Update cart count
-        alert("Cart cleared!");
-      }
-    }
-  });
 
   // Function to render menu items
   function renderMenu() {

@@ -88,23 +88,25 @@
     <div id="content">
       <!-- Page content will be dynamically loaded here -->
     </div>
-    <div id="cart-popup">
-      <button id="close-cart-popup" class="close-btn">×</button>
-      <h3>Shopping Cart</h3>
-      <ul id="cart-items">
-        <!-- Items will be dynamically added here -->
-        <img src="" alt="" />
-      </ul>
-      <div id="cart-total">
-        <strong>Total: </strong><span id="total-cost">$0</span>
-      </div>
-      <div class="cart-actions">
-        <button id="checkout-btn">Checkout</button>
-        <button id="clear-cart-btn">Clear Cart</button>
-      </div>
-      <div id="checkout-loader" class="hidden">Processing...</div>
-      <div id="checkout-success" class="hidden">Checkout successful!</div>
-    </div>
+    <div id="cart-popup-overlay"></div>
+
+<div id="cart-popup">
+  <button id="close-cart-popup" class="close-btn">×</button>
+  <h3>Shopping Cart</h3>
+  <ul id="cart-items">
+    <!-- Items will be dynamically added here -->
+  </ul>
+  <div id="cart-total">
+    <strong>Total: </strong><span id="total-cost">$0</span>
+  </div>
+  <div class="cart-actions">
+    <button id="checkout-btn">Checkout</button>
+    <button id="clear-cart-btn">Clear Cart</button>
+  </div>
+  <div id="checkout-loader" class="hidden">Processing...</div>
+  <div id="checkout-success" class="hidden">Checkout successful!</div>
+</div>
+
     <footer id="footer-container">
       <!-- Footer content can be dynamically loaded here if needed -->
     </footer>

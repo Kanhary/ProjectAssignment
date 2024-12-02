@@ -17,7 +17,6 @@
   --btn-gold:#f8f3cb;
   --primary-color: #7b2b30; /* Deep wine red */
   --secondary-color: #f2f0ec; /* Light parchment */
-  --text-color: #333;
   --button-color: #7b2b30;
   --button-hover: #9c3a40;
   --input-bg: #fff;
@@ -100,26 +99,24 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  height: 70px;
+  height: 80px;
   width: 100%;
   background-color: var(--nav-color);
   z-index: 100;
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.214);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease-in-out;
 }
 body.dark nav {
   border: 1px solid #393838;
 }
 nav .nav-bar {
-  position: relative;
-  height: 100%;
   max-width: 1200px;
-  width: 100%;
-  background-color: var(--nav-color);
   margin: 0 auto;
-  /* padding: 0 30px; */
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 20px;
 }
 nav .nav-bar .sidebarOpen {
   color: var(--text-color);
@@ -179,14 +176,16 @@ nav .nav-bar .logo i {
   margin: 0 5px;
   list-style: none;
 }
-.nav-links li a {
-  position: relative;
-  font-size: 15px;
-  font-weight: 600;
+.nav-links a {
+  font-size: 16px;
+  font-weight: 500;
   color: var(--text-color);
   text-decoration: none;
-  padding: 10px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
+
 
 .nav-links li a.active {
   text-decoration: underline;
@@ -227,16 +226,13 @@ nav .nav-bar .logo i {
 }
 
 .frutiger-button {
-  
-  cursor: pointer;
-  position: relative;
-  padding: 2px;
-  background: var(--nav-color);
+  background: var(--btn-bg-color);
+  border: none;
+  padding: 10px 15px;
   border-radius: 6px;
-  border: 0;
-  margin: 0 5px;
-  box-shadow: 0px 1px 2px 0px var(--box-color-shadow);
-  transition: 0.3s all;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 
@@ -267,11 +263,6 @@ nav .nav-bar .logo i {
 }
 
 
-
-
-
-
-
 .inner {
   position: relative;
   inset: 0px;
@@ -284,15 +275,19 @@ nav .nav-bar .logo i {
   transition: inherit;
 }
 
-
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
 .inner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(-65deg, #ffffff17 40%, var(--text-color-shadow) 50%, var(--body-color) 70%);
+  content: '';
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
   background-size: 200% 100%;
-  background-repeat: no-repeat;
-  animation: thing 3s ease infinite;
+  animation: shimmer 3s infinite;
 }
 
 @keyframes thing {
@@ -363,19 +358,40 @@ nav .nav-bar .logo i {
 #checkout-success {
   color: #28a745;
 }
+#cart-background {
+  width: 100%;
+  height: 100%;
+  background: #ffffff; /* Adjust color as needed */
+  filter: blur(10px); /* Adjust blur strength */
+}
+
+#cart-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(5px); /* Blur effect */
+  z-index: 999; /* Below cart popup */
+  display: none; /* Initially hidden */
+}
+
 #cart-popup {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -20%);
+  transform: translate(-50%, -50%);
   background-color: var(--body-color);
-  border: 1px solid var(--body-color);
-  border-radius: 10px;
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
   padding: 20px;
-  z-index: 1000;
+  z-index: 1000; /* Above overlay */
   width: 500px;
   box-shadow: 0 4px 8px var(--box-color-shadow);
+  display: none; /* Initially hidden */
 }
+
 
 #cart-popup-overlay {
   position: fixed;
@@ -442,22 +458,7 @@ nav .nav-bar .logo i {
   color: #ff0000;
 }
 
-#cart-popup {
-  border: 1px solid var(--text-color);
-  border-radius: 10px;
-  padding: 20px;
-  width: 400px; /* Increased width */
-  position: fixed;
-  top: 190px;
-  right: -420px; /* Adjusted for new width */
-  background: var(--body-color);
-  box-shadow: 0 60px 70px var(--box-color-shadow);
-  display: none;
-  z-index: 99000; /* Ensure it appears above other content */
-  max-height: 80vh; /* Prevent overflowing on small screens */
-  overflow-y: auto; /* Scrollable content if too many items */
-  animation: slideIn 0.5s forwards; /* Add animation */
-}
+
 @keyframes slideIn {
   from {
     right: -420px; /* Adjusted for new width */
