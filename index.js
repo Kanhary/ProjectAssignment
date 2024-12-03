@@ -317,6 +317,20 @@ $(document).on("click", "#home-btn-reservation", function (e) {
         price: "$80",
         categories: ["wine"],
       },
+      {
+        name: "Hunuman Beer",
+        description: "A smooth and fruity red wine with rich flavors of plum and cherry.",
+        image: "../assets/images/beer2.png",
+        price: "$80",
+        categories: ["beer"],
+      },
+      {
+        name: "Tiger Beer",
+        description: "A smooth and fruity red wine with rich flavors of plum and cherry.",
+        image: "../assets/images/beer3.png",
+        price: "$80",
+        categories: ["beer"],
+      },
     
       
     ];
