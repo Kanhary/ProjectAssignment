@@ -488,12 +488,12 @@ nav .nav-bar .logo-text .separator {
   }
 }
 
-#cart-popup h3 {
+/* #cart-popup h3 {
   font-size: 1.8rem;
   margin-bottom: 20px;
   color: #333;
   text-align: center;
-}
+} */
 
 #cart-items {
   list-style: none;
@@ -636,9 +636,9 @@ nav .nav-bar .logo-text .separator {
 /* Cart popup heading */
 #cart-popup h3 {
   margin: 0 0 15px; /* Adjusted margin for better spacing */
-  color: var(--text-color);
+  color: #590429;
   font-size: 15px; /* Increased font size */
-  border-bottom: 2px solid var(--text-color);
+  border-bottom: 2px solid #590429;
   padding-bottom: 8px;
 }
 
