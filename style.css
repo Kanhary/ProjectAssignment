@@ -22,6 +22,7 @@
   --input-bg: #fff;
   --input-border: #ccc;
   --p-color: rgb(7, 7, 7);
+  --name-color: #333;
 }
 body.dark {
   --body-color: #18191a;
@@ -31,6 +32,7 @@ body.dark {
   --text-color: #f9fbff;
   --btn-color: #f9fbffd0;
   --p-clor: white;
+  --name-color : rgb(198, 170, 100);
 }
 /* PreLoader */
 #preloader {
@@ -972,7 +974,7 @@ nav .nav-bar .logo-text .separator {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #333;
+  color: var(--name-color);
   align-items: center;
   justify-content: center;
   display: flex;
