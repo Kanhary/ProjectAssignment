@@ -444,7 +444,7 @@ $(document).on("click", "#home-btn-reservation", function (e) {
     items.forEach((item) => {
       const menuItemHtml = `
         <div class="menu-item" data-aos="zoom-in" data-item-id="${item.sku}">
-          <img src="${item.image}" alt="${item.name}" />
+          <img src="${item.image}" alt="${item.name}" class="menu-image" />
           <div class="menu-flex">
             <strong>${item.name}</strong> - <span style="color: #ff0000;">${item.price}</span>
             <p>${item.description}</p>
@@ -455,30 +455,30 @@ $(document).on("click", "#home-btn-reservation", function (e) {
       $("#menuGrid").append(menuItemHtml); // Append the item HTML to the menu grid
     });
   
-    // Add click event listener to display full details
-    $(".menu-item").on("click", function() {
-      const itemId = $(this).data("item-id"); // Get the item SKU
+    // Add click event listener to the image inside menu item
+    $(".menu-image").on("click", function() {
+      const itemId = $(this).closest(".menu-item").data("item-id"); // Get the item SKU from the closest menu-item
       const item = items.find(item => item.sku === itemId); // Find the item by SKU
   
       if (item) {
         // Show the item details
         const itemDetailsHtml = `
-        <div class="item-details">
-        <button class="close-btn" id="closeDetailsBtn">X</button>
-        <h2 class="item-name">${item.name}</h2>
-        <div class="item-info">
-          <img src="${item.image}" alt="${item.name}" class="item-image" />
-          <div class="details-text">
-            <p><strong>Description:</strong> ${item.description}</p>
-            <p><strong>Price:</strong> ${item.price}</p>
-            <p><strong>Category:</strong> ${item.category}</p>
-            <p><strong>Tags:</strong> ${item.tags.join(", ")}</p>
-            <p><strong>Rating:</strong> ${"★".repeat(item.stars)} (${item.reviewsCount} reviews)</p>
+          <div class="item-details">
+            <button class="close-btn" id="closeDetailsBtn">×</button>
+            <h2 class="item-name">${item.name}</h2>
+            <div class="item-info">
+              <img src="${item.image}" alt="${item.name}" class="item-image" />
+              <br><br>
+              <div class="details-text">
+                <p><strong>Description:</strong> ${item.description}</p>
+                <p><strong>Price:</strong> ${item.price}</p>
+                <p><strong>Category:</strong> ${item.category}</p>
+                <p><strong>Tags:</strong> ${item.tags.join(", ")}</p>
+                <p><strong>Rating:</strong> ${"★".repeat(item.stars)} (${item.reviewsCount} reviews)</p>
+              </div>
+            </div>
+            <button class="add-to-cart" data-item="${item.name}" data-image="${item.image}" data-price="${item.price}">Add to Cart</button>
           </div>
-        </div>
-        <button class="add-to-cart" data-item="${item.name}" data-image="${item.image}" data-price="${item.price}">Add to Cart</button>
-      </div>
-      
         `;
   
         // Ensure the item details section exists
@@ -500,6 +500,7 @@ $(document).on("click", "#home-btn-reservation", function (e) {
       $("#itemDetailsSection").hide(); // Hide the item details section
     });
   }
+  
   
   
 });
