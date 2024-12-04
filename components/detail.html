@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Item Detail</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="menu-item-detail">
+      <div id="menu-detail-container" class="detail-container">
+        <!-- Menu item details will be populated here -->
+      </div>
+    </section>
+
+    <script>
+      // Extract query parameter from the URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const itemName = urlParams.get('name'); // Get the 'name' parameter
+
+      console.log("Item name from URL:", itemName); // Log the item name from the URL
+
+      // Assuming you have a list of items stored or fetched from an API
+      const menuItems = [
+        {
+          name: 'Whiskey Deluxe',
+          image: 'whiskey.jpg',
+          price: '$50',
+          description: 'A premium blend of aged whiskey.',
+          details: 'This whiskey is distilled and aged in oak barrels for 12 years.',
+        },
+        // Add other menu items here...
+      ];
+
+      // Find the item based on the name
+      const item = menuItems.find((menuItem) => menuItem.name === itemName);
+
+      if (item) {
+        // Populate the detail container with the item's information
+        const detailContainer = document.getElementById('menu-detail-container');
+        detailContainer.innerHTML = `
+          <h1>${item.name}</h1>
+          <img src="${item.image}" alt="${item.name}" />
+          <p><strong>Price:</strong> ${item.price}</p>
+          <p><strong>Description:</strong> ${item.description}</p>
+          <p><strong>Details:</strong> ${item.details}</p>
+        `;
+      } else {
+        // If the item is not found, display an error message
+        document.getElementById('menu-detail-container').innerHTML = '<p>Item not found.</p>';
+      }
+    </script>
+  </body>
+</html>
