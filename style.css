@@ -21,6 +21,7 @@
   --button-hover: #9c3a40;
   --input-bg: #fff;
   --input-border: #ccc;
+  --p-color: rgb(7, 7, 7);
 }
 body.dark {
   --body-color: #18191a;
@@ -29,7 +30,7 @@ body.dark {
   --box-color-shadow:#ffffff3d;
   --text-color: #f9fbff;
   --btn-color: #f9fbffd0;
- 
+  --p-clor: white;
 }
 /* PreLoader */
 #preloader {
@@ -1004,7 +1005,7 @@ nav .nav-bar .logo-text .separator {
 .details-text p {
   margin-bottom: 10px;
   font-size: 16px;
-  color: #010101;
+  color: var(--p-clor);
 }
 .rating-stars {
   color: red;
