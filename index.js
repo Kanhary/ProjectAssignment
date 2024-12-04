@@ -463,7 +463,7 @@ $(document).on("click", "#home-btn-reservation", function (e) {
       if (item) {
         // Show the item details
         const itemDetailsHtml = `
-          <div class="item-details">
+          <div class="item-details" data-aos="zoom-in" data-aos-duration="500">
             <button class="close-btn" id="closeDetailsBtn">×</button>
             <h2 class="item-name">${item.name}</h2>
             <div class="item-info">
@@ -474,7 +474,12 @@ $(document).on("click", "#home-btn-reservation", function (e) {
                 <p><strong>Price:</strong> ${item.price}</p>
                 <p><strong>Category:</strong> ${item.category}</p>
                 <p><strong>Tags:</strong> ${item.tags.join(", ")}</p>
-                <p class="star"><strong>Rating:</strong> ${"★".repeat(item.stars)} (${item.reviewsCount} reviews)</p>
+              <p class="star">
+  <strong>Rating:</strong> 
+  <span class="rating-stars">${"★".repeat(item.stars)}</span> 
+  (${item.reviewsCount} reviews)
+</p>
+
               </div>
             </div>
             <button class="add-to-cart" data-item="${item.name}" data-image="${item.image}" data-price="${item.price}">Add to Cart</button>

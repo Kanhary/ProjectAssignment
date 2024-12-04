@@ -921,7 +921,7 @@ nav .nav-bar .logo-text .separator {
   transform: translate(-50%, -50%);
   padding: 20px;
   background: rgba(0, 0, 0, 0.5); 
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -934,7 +934,7 @@ nav .nav-bar .logo-text .separator {
 }
 /* Item details container */
 .item-details {
-  background-color: #fff;
+  background-color: var(--body-color);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -943,6 +943,8 @@ nav .nav-bar .logo-text .separator {
   position: relative;
   font-family: 'Arial', sans-serif;
   overflow: hidden;
+  border: 1px solid rgb(249, 178, 0);
+  margin-top: 6rem;
 }
 
 
@@ -970,6 +972,9 @@ nav .nav-bar .logo-text .separator {
   font-weight: bold;
   margin-bottom: 20px;
   color: #333;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 /* Flex container for image and text */
@@ -985,9 +990,9 @@ nav .nav-bar .logo-text .separator {
   max-width: 300px;
   max-height: 300px;
   object-fit: cover;
-  border-radius: 10px;
- 
+  box-shadow: 1px 0px  rgb(137, 118, 71); /* Horizontal shadow with soft spread */
 }
+
 
 /* Text section for item details */
 .details-text {
@@ -999,7 +1004,11 @@ nav .nav-bar .logo-text .separator {
 .details-text p {
   margin-bottom: 10px;
   font-size: 16px;
-  color: #555;
+  color: #010101;
+}
+.rating-stars {
+  color: red;
+  font-weight: bold; /* Optional, to make the stars bold */
 }
 
 .details-text strong {
@@ -1010,7 +1019,7 @@ nav .nav-bar .logo-text .separator {
 
 /* Rating stars */
 .details-text p strong {
-  color: #ffcc00; /* Gold color for stars */
+  color: rgb(198, 170, 100); /* Gold color for stars */
 }
 
 /* Button styling */
@@ -2593,4 +2602,34 @@ footer {
     font-size: 10px;
   }
   /* FOOTER */
+
+
+  .item-details {
+    margin-top: 3rem;
+    padding: 15px;
+  }
+
+  .item-name {
+    font-size: 20px;
+  }
+
+  .item-info {
+    flex-direction: column; /* Stack the image and text vertically */
+    align-items: center; /* Center align items */
+  }
+
+  .item-image {
+    max-width: 250px; /* Reduce image size on smaller screens */
+    max-height: 250px;
+  }
+
+  .details-text {
+    margin-top: 10px;
+  }
+
+  .details-text p {
+    font-size: 14px; /* Smaller text for mobile */
+  }
+
+  
 }
