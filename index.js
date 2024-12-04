@@ -226,6 +226,11 @@ $(document).on("click", "#home-btn-reservation", function (e) {
         image: "../assets/images/menu1.png",
         price: "$45",
         categories: ["whisky"],
+        stars: 4,
+        reviewsCount: 12,
+        sku: "001",
+        category: "Whisky",
+        tags: ["Bottle", "Drink", "Whisky"]
       },
       {
         name: "Golden Reserve Whisky",
@@ -233,6 +238,11 @@ $(document).on("click", "#home-btn-reservation", function (e) {
         image: "../assets/images/menu2.png",
         price: "$60",
         categories: ["whisky"],
+        stars: 5,
+        reviewsCount: 8,
+        sku: "002",
+        category: "Whisky",
+        tags: ["Bottle", "Drink", "Whisky"]
       },
       {
         name: "Black Label Whisky",
@@ -240,6 +250,11 @@ $(document).on("click", "#home-btn-reservation", function (e) {
         image: "../assets/images/menu3.png",
         price: "$75",
         categories: ["whisky"],
+        stars: 4,
+        reviewsCount: 10,
+        sku: "003",
+        category: "Whisky",
+        tags: ["Bottle", "Drink", "Whisky"]
       },
       {
         name: "Peat Aged Whisky",
@@ -247,6 +262,11 @@ $(document).on("click", "#home-btn-reservation", function (e) {
         image: "../assets/images/menu4.png",
         price: "$85",
         categories: ["whisky"],
+        stars: 5,
+        reviewsCount: 15,
+        sku: "004",
+        category: "Whisky",
+        tags: ["Bottle", "Drink", "Whisky"]
       },
       {
         name: "Highland Gold Whisky",
@@ -254,6 +274,11 @@ $(document).on("click", "#home-btn-reservation", function (e) {
         image: "../assets/images/whisky.png",
         price: "$55",
         categories: ["whisky"],
+        stars: 4,
+        reviewsCount: 7,
+        sku: "005",
+        category: "Whisky",
+        tags: ["Bottle", "Drink", "Whisky"]
       },
       
       // Bourbon
@@ -263,6 +288,11 @@ $(document).on("click", "#home-btn-reservation", function (e) {
         image: "../assets/images/menu2.png",
         price: "$50",
         categories: ["Bourbon"],
+        stars: 4,
+        reviewsCount: 9,
+        sku: "006",
+        category: "Bourbon",
+        tags: ["Bottle", "Drink", "Bourbon"]
       },
     
       // Fruit Liqueur
@@ -272,6 +302,11 @@ $(document).on("click", "#home-btn-reservation", function (e) {
         image: "../assets/images/menu4.png",
         price: "$35",
         categories: ["fruit Liqueur"],
+        stars: 3,
+        reviewsCount: 5,
+        sku: "007",
+        category: "Fruit Liqueur",
+        tags: ["Bottle", "Drink", "Liqueur"]
       },
       {
         name: "Berry Fusion Liqueur",
@@ -279,6 +314,11 @@ $(document).on("click", "#home-btn-reservation", function (e) {
         image: "../assets/images/menu5.png",
         price: "$40",
         categories: ["fruit Liqueur"],
+        stars: 4,
+        reviewsCount: 8,
+        sku: "008",
+        category: "Fruit Liqueur",
+        tags: ["Bottle", "Drink", "Liqueur"]
       },
     
       // Wine
@@ -288,6 +328,11 @@ $(document).on("click", "#home-btn-reservation", function (e) {
         image: "../assets/images/wine1.jpg",
         price: "$120",
         categories: ["wine"],
+        stars: 5,
+        reviewsCount: 14,
+        sku: "009",
+        category: "Wine",
+        tags: ["Bottle", "Wine", "Red"]
       },
       {
         name: "Chardonnay Reserve",
@@ -295,6 +340,11 @@ $(document).on("click", "#home-btn-reservation", function (e) {
         image: "../assets/images/wine2.jpg",
         price: "$85",
         categories: ["wine"],
+        stars: 4,
+        reviewsCount: 10,
+        sku: "010",
+        category: "Wine",
+        tags: ["Bottle", "Wine", "White"]
       },
       {
         name: "Pinot Noir Elegance",
@@ -302,6 +352,11 @@ $(document).on("click", "#home-btn-reservation", function (e) {
         image: "../assets/images/wine3.jpg",
         price: "$95",
         categories: ["wine"],
+        stars: 5,
+        reviewsCount: 18,
+        sku: "011",
+        category: "Wine",
+        tags: ["Bottle", "Wine", "Red"]
       },
       {
         name: "Riesling Sweetness",
@@ -309,6 +364,11 @@ $(document).on("click", "#home-btn-reservation", function (e) {
         image: "../assets/images/wine4.jpg",
         price: "$70",
         categories: ["wine"],
+        stars: 3,
+        reviewsCount: 4,
+        sku: "012",
+        category: "Wine",
+        tags: ["Bottle", "Wine", "White"]
       },
       {
         name: "Merlot Classic",
@@ -316,6 +376,11 @@ $(document).on("click", "#home-btn-reservation", function (e) {
         image: "../assets/images/wine5.jpg",
         price: "$80",
         categories: ["wine"],
+        stars: 4,
+        reviewsCount: 13,
+        sku: "013",
+        category: "Wine",
+        tags: ["Bottle", "Wine", "Red"]
       },
       {
         name: "Hunuman Beer",
@@ -323,6 +388,11 @@ $(document).on("click", "#home-btn-reservation", function (e) {
         image: "../assets/images/beer2.png",
         price: "$80",
         categories: ["beer"],
+        stars: 3,
+        reviewsCount: 6,
+        sku: "014",
+        category: "Beer",
+        tags: ["Bottle", "Beer"]
       },
       {
         name: "Tiger Beer",
@@ -330,9 +400,12 @@ $(document).on("click", "#home-btn-reservation", function (e) {
         image: "../assets/images/beer3.png",
         price: "$80",
         categories: ["beer"],
+        stars: 3,
+        reviewsCount: 4,
+        sku: "015",
+        category: "Beer",
+        tags: ["Bottle", "Beer"]
       },
-    
-      
     ];
     
 
@@ -370,19 +443,71 @@ $(document).on("click", "#home-btn-reservation", function (e) {
     $("#menuGrid").empty(); // Clear the menu grid before adding new items
     items.forEach((item) => {
       const menuItemHtml = `
-      <div class="menu-item" data-aos="zoom-in">
-      <img src="${item.image}" alt="${item.name}" />
-      <div class="menu-flex">
-        <strong>${item.name}</strong> - <span style="color: #ff0000;">${item.price}</span>
-        <p>${item.description}</p>
-        <button class="add-to-cart" data-item="${item.name}" data-image="${item.image}" data-price="${item.price}">Add to Cart</button>
-      </div>
-    </div>
-    
+        <div class="menu-item" data-aos="zoom-in" data-item-id="${item.sku}">
+          <img src="${item.image}" alt="${item.name}" class="menu-image" />
+          <div class="menu-flex">
+            <strong>${item.name}</strong> - <span style="color: #ff0000;">${item.price}</span>
+            <p>${item.description}</p>
+            <button class="add-to-cart" data-item="${item.name}" data-image="${item.image}" data-price="${item.price}">Add to Cart</button>
+          </div>
+        </div>
       `;
       $("#menuGrid").append(menuItemHtml); // Append the item HTML to the menu grid
     });
+  
+    // Add click event listener to the image inside menu item
+    $(".menu-image").on("click", function() {
+      const itemId = $(this).closest(".menu-item").data("item-id"); // Get the item SKU from the closest menu-item
+      const item = items.find(item => item.sku === itemId); // Find the item by SKU
+  
+      if (item) {
+        // Show the item details
+        const itemDetailsHtml = `
+          <div class="item-details" data-aos="zoom-in" data-aos-duration="500">
+            <button class="close-btn" id="closeDetailsBtn">×</button>
+            <h2 class="item-name">${item.name}</h2>
+            <div class="item-info">
+              <img src="${item.image}" alt="${item.name}" class="item-image" />
+              <br><br>
+              <div class="details-text">
+                <p><strong>Description:</strong> ${item.description}</p>
+                <p><strong>Price:</strong> ${item.price}</p>
+                <p><strong>Category:</strong> ${item.category}</p>
+                <p><strong>Tags:</strong> ${item.tags.join(", ")}</p>
+              <p class="star">
+  <strong>Rating:</strong> 
+  <span class="rating-stars">${"★".repeat(item.stars)}</span> 
+  (${item.reviewsCount} reviews)
+</p>
+
+              </div>
+            </div>
+            <button class="add-to-cart" data-item="${item.name}" data-image="${item.image}" data-price="${item.price}">Add to Cart</button>
+          </div>
+        `;
+  
+        // Ensure the item details section exists
+        const detailsSection = $("#itemDetailsSection");
+  
+        if (detailsSection.length > 0) {
+          detailsSection.html(itemDetailsHtml);
+          detailsSection.show(); // Display the details section
+        } else {
+          console.log("Item details section not found.");
+        }
+      } else {
+        console.log("Item not found.");
+      }
+    });
+  
+    // Close button functionality with event delegation
+    $(document).on("click", "#closeDetailsBtn", function() {
+      $("#itemDetailsSection").hide(); // Hide the item details section
+    });
   }
+  
+  
+  
 });
 
 // function startCarousel() {
